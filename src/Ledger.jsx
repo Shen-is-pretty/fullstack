@@ -16,7 +16,7 @@ import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import {FormControl, Dropdown, DropdownButton, Carousel, ModalHeader } from 'react-bootstrap';
 import { API_ENDPOINT } from './Api';
-import './ledger.css';
+import './Ledger.css';
 
 
 
