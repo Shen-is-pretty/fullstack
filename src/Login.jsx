@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { jwtDecode } from 'jwt-decode'; // Correct import
 import { API_ENDPOINT } from './Api';
-import './login.css'; // Import the CSS file
+import './Login.css'; // Import the CSS file
 
 function Login() {
 
