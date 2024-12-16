@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jacquard+12+Charted:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trade+Winds:wght@400;700&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lora', serif; /* Corrected font fallback */
+  background: url('/BGP.gif') no-repeat center center fixed; /* Fixed shorthand syntax */
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: white; /* Default font color */
+}
+
+h1, h3, h4, h5, h6 {
+  font-family: 'Jacquard 12 Charted', serif; /* Corrected font fallback */
+  color: #ffffff;
+  text-shadow: 
+    0 0 8px rgb(253, 254, 255), 
+    0 0 15px rgba(150, 189, 248, 0.65), 
+    0 0 20px rgba(167, 188, 226, 0.5); /* Simplified glowing effect */
+}
+
+h3 {
+  font-family: 'Trade Winds', serif; /* Corrected font fallback */
+  color: #ffffff;
+  text-shadow: 
+    0 0 8px rgb(253, 254, 255), 
+    0 0 15px rgba(150, 189, 248, 0.65), 
+    0 0 20px rgba(167, 188, 226, 0.5); /* Simplified glowing effect */
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: flex;
+  width: 100vw; /* Ensures the container spans the full width of the viewport */
+  height: 100vh; /* Ensures the container spans the full height of the viewport */
+  background: url('/BGP.gif') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0; /* Remove any margins around the container */
+  overflow: hidden; /* Prevents any potential scrollbars */
+}
+
+
+.sidebar {
+  z-index: 500; /* Sidebar has a lower z-index */
+}
+
+/* Hamburger Menu */
+.hamburger-menu {
+  display: block;
+  position: fixed; /* Ensures it stays fixed on the screen */
+  top: 20px;
+  right: 16px;
+  cursor: pointer;
+  z-index: 1000; /* Keep it above all other elements */
+}
+
+.hamburger-menu div {
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  padding: 20px;
+  position: absolute; /* Use absolute positioning to allow dynamic placement */
+  top: 60px; /* Adjust to place it below the hamburger menu */
+  right: -250px; /* Initially hidden off-screen to the right */
+  height: calc(100% - 60px); /* Adjust height to exclude the space of the hamburger menu */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4));
+  backdrop-filter: blur(10px);
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0 20px 20px 0;
+  box-shadow: 0 15px 20px rgba(255, 255, 255, 0.2), 0 5px 15px rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease; /* Smooth transition when toggling */
+}
+
+.sidebar.active {
+  right: 0; /* Slide into view when active */
+}
+
+.sidebar h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: 'Lora', serif;
+  font-weight: 700; 
+  color: #a3d1fa;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 10px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #c2d8f1;
+  font-size: 18px;
+  font-family: 'Lora', serif;
+  text-shadow: 
+    0 0 8px rgba(11, 24, 212, 0.7), 
+    0 0 15px rgba(7, 60, 160, 0.7), 
+    0 0 20px rgba(0, 209, 178, 0.2);
+}
+
+.sidebar ul li a.active {
+  font-weight: bold;
+  color: #75adee;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+  flex-grow: 1;
+  margin-right: 0; /* Adjust the margin for right sidebar */
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  overflow-y: auto;
+  height: 100vh;
+  transition: margin-right 0.3s ease; /* Adjust transition */
+}
+
+.main-content.sidebar-active {
+  margin-right: 250px; /* Adjust for right sidebar */
+}
+
+/* Clothing Section */
+.clothing-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.content-item {
+  width: 200px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.23);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.clothing-item-img {
+  width: 150px;
+  height: 180px;
+  border-radius: 8px;
+}
+
+.item-details {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn {
+  background-color: #184988;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  font-family: 'Roboto', sans-serif;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #4e90ce;
+}
+
+/* Cart */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-item-img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.remove-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-btn:hover {
+  background-color: #c82333;
+}
+
+.cart-total {
+  margin-top: 20px;
+}
+
+.checkout-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.checkout-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+/* Checkout Form */
+.checkout-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.checkout-form input,
+.checkout-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-order-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.submit-order-btn:hover {
+  background-color: #218838;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+

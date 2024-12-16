@@ -1,0 +1,106 @@
+/* Logout Button Styles */
+.logout-btn {
+  background-color: #020011ee; /* Light blue */
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #0e1357; /* Darker blue */
+}
+
+.logout-btn:focus {
+  outline: none;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: bottom fixed; /* Covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 5;
+  height: 5;
+  background-color: transparent;
+  display: none; /* Initially hidden */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-overlay.show {
+  display: flex; /* Show the modal when the "show" class is added */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #ffffff; /* White background */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(3, 46, 112, 0.863); /* Subtle shadow for depth */
+  width: 200px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-out; /* Smooth fade-in animation */
+}
+
+/* Modal Heading */
+.modal-content h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #fffefe; 
+}
+
+/* Modal Buttons Container */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Adds spacing between buttons */
+}
+
+/* Modal Buttons */
+.modal-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Confirm Button */
+.confirm-btn {
+  background-color: #050f53d5; 
+  color: white;
+}
+
+.confirm-btn:hover {
+  background-color: #8295e9; 
+}
+
+/* Cancel Button */
+.cancel-btn {
+  background-color: #2e4fe06b; /* Light red */
+  color: rgb(17, 7, 107);
+}
+
+.cancel-btn:hover {
+  background-color: #82b5f0; /* Darker red */
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9); /* Slightly smaller */
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1); /* Normal size */
+  }
+}

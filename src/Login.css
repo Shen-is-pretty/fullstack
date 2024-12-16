@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Oi&display=swap');
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif; /* Default font for the body */
+  background: url('/BGP.gif'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px); /* Apply blur effect to background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(202, 211, 253, 0.938), 0 0 25px rgb(124, 222, 235); /* Glowing effect */
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for the frosted effect */
+}
+
+.title {
+  font-family: 'Oi', sans-serif; /* Apply font to the title */
+  font-size: 25px;
+  color: #00aaff; /* Bright blue color */
+  text-shadow: 0 0 8px rgba(0, 170, 255, 0.8); /* Blur effect with bright blue */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  color: #d1d1d1;
+  margin-bottom: 30px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.input-group input {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.input-group input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.login-btn {
+  background-color: #1779bb;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #8ac8f1;
+}
+
+.login-btn.loading {
+  position: relative;
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #100974; /* Slightly different color for loading state */
+}
+
+.login-btn.loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border: 3px solid transparent;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  transform: translate(-50%, -50%);
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+  border-radius: 12px;
+  padding: 30px;
+  backdrop-filter: blur(10px); /* Apply blur effect to background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(202, 211, 253, 0.938), 0 0 25px rgb(124, 222, 235); /* Glowing effect */
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for the frosted effect */
+  position: absolute; /* Make it absolute for dragging */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: grab; /* Change cursor to indicate draggable element */
+  user-select: none; /* Prevent text selection while dragging */
+}
+
+.login-box:active {
+  cursor: grabbing; /* Show a dragging cursor when active */
+}
+
+body {
+  font-family: sans-serif; /* Default font for the body */
+  background: url('BGP.gif'); 
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  position: relative; /* For the absolute positioning of .login-box */
+}
+
+/* Keyframes for spinner animation */
+@keyframes spin {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.register-btn {
+  background-color: transparent;
+  border: 1px solid #3498db;
+  color: #3498db;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+

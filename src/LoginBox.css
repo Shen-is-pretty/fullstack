@@ -1,0 +1,33 @@
+/* Apply relative positioning to ensure absolute positioning works correctly */
+body {
+    position: relative; /* Important: this gives the login-box a reference point */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Full height of the screen */
+  }
+  
+  .login-box {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 12px;
+    padding: 30px;
+    backdrop-filter: blur(10px); /* Apply blur effect to background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px rgba(202, 211, 253, 0.938), 0 0 25px rgb(124, 222, 235);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: grab; /* Indicates it is draggable */
+  }
+  
+  .login-box:active {
+    cursor: grabbing; /* Change to grabbing when mouse is down */
+  }
+  
+  .title {
+    font-family: 'Oi', sans-serif;
+    font-size: 25px;
+    color: #00aaff;
+    text-shadow: 0 0 8px rgba(0, 170, 255, 0.8);
+    margin-bottom: 10px;
+  }
+  

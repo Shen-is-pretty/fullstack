@@ -1,0 +1,276 @@
+/* Global Styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: transparent;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Allow body scrolling */
+    height: 100vh; /* Full screen height */
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    color: #01051f;
+}
+/* Navbar Styles */
+.custom-navbar {
+    background-color: #95bfe9; 
+    color: white;
+    position: fixed; /* Ensure navbar stays at the top */
+    top: 0;
+    width: 200vh;
+    z-index: 9999; /* Make sure navbar is on top of other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for better visibility */
+}
+
+/* Ensuring navbar links are visible */
+.custom-navbar .navbar-brand {
+    color: rgba(0, 0, 41, 0.89);
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.custom-navbar .nav-link {
+    color: #6b6a6a;
+    margin-top: 2rem;
+}
+
+.custom-navbar .nav-link:hover {
+    color: rgb(112, 173, 214);
+}
+
+.custom-navbar .dropdown-menu {
+    background-color: #0c325862;
+    border: none;
+}
+
+.custom-navbar .dropdown-item {
+    color: rgb(0, 5, 49);
+}
+
+/* Add spacing to the body content to prevent overlap */
+body {
+    padding-top: 0px; /* Adjust this value based on the height of your navbar */
+}
+
+/* Adjust the modal and content to not overlap with the fixed navbar */
+.modal-dialog {
+    margin-top: 80px; /* Add space so modal content doesn't hide under the navbar */
+}
+
+.container {
+    width: 100%;/* Set the container to full width */
+    margin: 0; /* Remove external margins */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke; /* Matching the inline background color */
+} 
+
+/* Modal Styles for Full Screen */
+.modal-full-width {
+    max-width: 90%; /* Slight padding on both sides */
+    margin: 0 auto; /* Center horizontally */
+    height: 90vh; /* Almost full height */
+    overflow-y: auto; /* Allow scrolling inside modal if content overflows */
+}
+
+.modal-content {
+    height: 100%; /* Take full height of modal container */
+    overflow: hidden; /* Prevent internal scrolling on modal itself */
+}
+
+.full-screen-container {
+    width: 100%;
+    height: 100vh;
+    background-color: #f5f5dc; /* Your chosen background color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Grid Container for 3 Columns */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal-width columns */
+    gap: 100px; /* Add space between grid items */
+    overflow-y: auto; /* Enable scrolling if needed */
+}
+
+/* Table Styles */
+/* Full-Width Table Styles */
+.table-fullscreen {
+    width: 100%; /* Make the table span the full width of the screen */
+    border-collapse: collapse; /* Ensure borders collapse for a cleaner look */
+}
+
+.table-fullscreen th,
+.table-fullscreen td {
+    padding: 10px; /* Add padding for better readability */
+    text-align: center; /* Center align content */
+    border: 1px solid #ddd; /* Add border to cells */
+}
+
+.table-text td{
+    text-align: center; /* Center align content */
+    border: 1px
+    solid #ddd; /* Add border to cells */
+}
+
+.table-fullscreen th {
+    background-color: #e0e0e0; /* Light background for headers */
+    font-weight: bold;
+    text-transform: uppercase; /* Optional: Make headers uppercase */
+}
+
+.table-fullscreen tbody tr:nth-child(odd) {
+    background-color: #201c1c; /* Light background for alternate rows */
+}
+
+.table-fullscreen tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight row on hover */
+    cursor: pointer;
+}
+
+.table th, .table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table tbody tr:nth-child(odd) {
+    background-color: #fafafa;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Button Styles */
+button {
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin:20px; /* Add spacing around buttons */
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button.btn-sm {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+   
+}
+
+button.btn-success {
+    background-color: #28a745;
+    color: #ffffff;
+    
+    
+
+}
+
+button.btn-warning {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+button.btn-danger {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+button.btn-secondary {
+    background-color: #127505;
+    color: #fff;
+}
+
+/* Center Modal Properly */
+.modal {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    align-items: center;
+    z-index: 1050; /* Ensure it appears above other elements */
+}
+
+.modal-dialog {
+    margin: 0;
+    transform: translate(0, 0); /* Reset unnecessary translations */
+    width: full-width; /* Allow default Bootstrap responsiveness */
+    max-width: 500px; /* Set a max width for the modal */
+}
+
+/* Fix Backdrop */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+}
+
+/* Utility Classes */
+.float-end {
+    float: right;
+}
+
+.mb-2 {
+    margin-bottom: 16px;
+}
+
+.me-2 {
+    margin-right: 8px;
+}
+
+/* Navbar Customization */
+.custom-navbar {
+    background-color: #95bfe9;
+    color: white;
+    margin-top: -220px;
+}
+
+/* For the title of the page (Ledger) */
+h1 {
+    font-family: 'Lora', serif;
+    color: #0b345cd8;
+    font-size: 10.5rem;
+}
+
+/* Modal Header and Footer */
+.modal-header {
+    background-color: #f0f0f005;
+
+}
+
+.modal-footer {
+    background-color: #f9f9f9;
+}
+
+.table-bordered{
+    width: 93rem;
+    background-color: #0c1b24;
+    color:#ddd;
+    margin: 0 auto;
+
+    
+}
+
+.tab{
+
+    width: 100rem;
+    margin-left: 10rem;
+
+}

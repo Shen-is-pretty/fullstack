@@ -1,0 +1,180 @@
+/* General Reset */ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: url('/BGP.gif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.register-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.register-box {
+  background: Transparent; /* Semi-transparent white background */
+  border-radius: 8px; /* Adjusted to make it more rectangular */
+  padding: 40px; /* Increased padding */
+  backdrop-filter: blur(12px); /* Apply blur to background */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Shadow to give depth */
+  width: 500px; /* Increased width */
+  height: 550px; /* Increased height */
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Light border for frosted effect */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjust to allow better distribution */
+  align-items: center;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.1); /* Firefox */
+}
+
+/* Styling for custom scrollbar */
+.register-box::-webkit-scrollbar {
+  width: 8px; /* Width of the scrollbar */
+}
+
+.register-box::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1); /* Light frosted background for the track */
+  border-radius: 10px;
+  backdrop-filter: blur(6px); /* Applying the glass effect to the track */
+}
+
+.register-box::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4); /* Slightly transparent color for the thumb */
+  border-radius: 10px;
+  backdrop-filter: blur(6px); /* Glass effect on the thumb */
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+}
+
+.register-box::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6); /* Lighter color on hover */
+}
+
+.title {
+  font-size: 24px; /* Slightly larger font size */
+  color: #fff; /* White text color for contrast */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 14px; /* Adjusted font size */
+  color: #d1d1d1; /* Light grey color for readability */
+  margin-bottom: 20px; /* Increased margin */
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allow form to take up available space */
+  justify-content: space-between; /* Space out the form elements */
+}
+
+.input-group {
+  margin-bottom: 15px; /* Increased margin */
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 14px; /* Adjusted font size */
+  color: #fff; /* White text for labels */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px; /* Increased padding */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+  border-radius: 6px;
+  font-size: 16px; /* Adjusted font size */
+  margin-top: 5px;
+  background: rgba(255, 255, 255, 0.2); /* Light frosted effect on input fields */
+  color: #fff;
+}
+
+.input-group input:focus {
+  border-color: #6c63ff; /* Focus color on input fields */
+  outline: none;
+}
+
+.register-btn {
+  background-color: #6c63ff;
+  color: #fff;
+  padding: 14px 22px; /* Adjusted padding */
+  border: none;
+  border-radius: 6px;
+  font-size: 16px; /* Adjusted font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #5348d9; /* Darker shade on hover */
+}
+
+.error-message {
+  color: red;
+  font-size: 14px; /* Adjusted font size */
+  margin-bottom: 15px;
+}
+
+.success-message {
+  color: green;
+  font-size: 14px; /* Adjusted font size */
+  margin-bottom: 15px;
+}
+
+.links {
+  margin-top: 20px;
+}
+
+.links a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+  .register-box {
+    padding: 15px;
+    width: 90%;
+    height: auto; /* Allow height to adjust on smaller screens */
+    max-width: 100%;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  .input-group-wrapper {
+    flex-direction: column;
+  }
+
+  .input-group-wrapper .input-group {
+    margin-bottom: 8px;
+  }
+}
